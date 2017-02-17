@@ -1,4 +1,6 @@
-App Dev on Cloud Suite - APAC Destinasia Travel Rules Demo
+App Dev on Cloud Suite 
+
+APAC Destinasia Travel Rules Demo
 ==========================================================
 This demo is to install JBoss BRMS with Destinasia Travel discount rules in the Cloud based on leveraging any Red Hat OpenShift container based platform, such as:
 
