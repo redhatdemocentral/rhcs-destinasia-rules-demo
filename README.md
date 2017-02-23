@@ -52,6 +52,9 @@ $ sudo vi /etc/hosts
 192.168.99.100   apac-destinasia-rules-demo.192.168.99.100.xip.io 
 ```
 
+The rule test you find in the project is BROKEN... guess what, you need to fix that! Hint for the fix is that the flights are all
+APAC destinations, but the test uses an unknown destination for the rules. Can you fix it?
+
 
 Supporting Articles
 -------------------
