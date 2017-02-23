@@ -99,7 +99,7 @@ if [ -r $SRC_DIR/$EAP ] || [ -L $SRC_DIR/$EAP ]; then
 	echo Product EAP sources are present...
 	echo
 else
-	echo Need to download $EAP package from http://developers.redhat.com
+	echo Need to download $EAP package from https://developers.redhat.com/products/eap/download
 	echo and place it in the $SRC_DIR directory to proceed...
 	echo
 	exit
@@ -109,7 +109,7 @@ if [ -r $SRC_DIR/$BRMS ] || [ -L $SRC_DIR/$BRMS ]; then
 	echo Product BRMS sources are present...
 	echo
 else
-	echo Need to download $BRMS from http://developers.redhat.com
+	echo Need to download $BRMS from https://developers.redhat.com/products/bpmsuite/download
 	echo and place it in the $SRC_DIR directory to proceed...
 	echo
 	exit
