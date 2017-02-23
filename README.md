@@ -36,7 +36,7 @@ Now log in to JBoss BRMS and start developing containerized rules projects (the 
 
 Notes
 -----
-This project can be installed on any OpenShift platform, such as OpenShift Container Platform or Red Hat Container Development Kit. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
+This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
   $ ./init.sh IP
 ```
