@@ -19,7 +19,7 @@ Install JBoss BRMS on OpenShift
 
 2. [Download and unzip this demo.](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/archive/master.zip)
 
-3. Download JBoss EAP & JBoss BPM Suite, add to installs directory (see installs/README).
+3. Download JBoss EAP & JBoss BRMS, add to installs directory (see installs/README).
 
 4. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges:
 ```
