@@ -55,6 +55,23 @@ $ sudo vi /etc/hosts
 The rule test you find in the project is BROKEN... guess what, you need to fix that! Hint for the fix is that the flights are all
 APAC destinations, but the test uses an unknown destination for the rules. Can you fix it?
 
+Cloning the internal BRMS repo is possible but first you have to forward the port through the 'oc' commandline tooling:
+
+```
+# Find the container name with this command, look for 
+# running pod, not the build pod.
+#
+$ oc get pods
+
+# Forward local port to the exposed git repo port from BRMS container.
+#
+$ oc port-forward [pod-name] 9418:9418
+
+# Now you should be able to clone the repo.
+#
+$ git clone git://localhost:9418/destinasia 
+```
+
 
 Supporting Articles
 -------------------
