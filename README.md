@@ -55,20 +55,21 @@ $ sudo vi /etc/hosts
 The rule test you find in the project is BROKEN... guess what, you need to fix that! Hint for the fix is that the flights are all
 APAC destinations, but the test uses an unknown destination for the rules. Can you fix it?
 
-Cloning the internal BRMS repo is possible but first you have to forward the port through the 'oc' commandline tooling:
+To clone a repository in the running container, the following actions would need to occur from a developer's machine.
 
+1. Execute port forwarding through the OpenShift CLI to port 9418
 ```
-# Find the container name with this command, look for 
-# running pod, not the build pod.
-#
-$ oc get pods
+$ oc port-forward $(oc get pod -l=deploymentconfig=destinasia-rules-demo --template='{{ range .items }} {{ .metadata.name }} {{ end
+}}') 9418:9418
+```
 
-# Forward local port to the exposed git repo port from BRMS container.
-#
-$ oc port-forward [pod-name] 9418:9418
+This will open a tunnel between the developer's machine and the pod through the OpenShift API pod proxy. The command window will
+block while the session is open
 
-# Now you should be able to clone the repo.
-#
+2. Clone the repository.
+
+In another window, clone the remote repository.
+```
 $ git clone git://localhost:9418/destinasia 
 ```
 
