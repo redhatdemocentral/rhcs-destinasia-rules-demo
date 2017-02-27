@@ -48,7 +48,7 @@ RUN /opt/jboss/fix-permissions $BRMS_HOME/standalone/configuration/standalone.xm
 USER 1000
 
 # Expose Ports, 9481 is to allow for cloning of BRMS repos.
-EXPOSE 9990 9999 8080 9418 
+EXPOSE 9990 9999 8080 9418 8001
 
 # Run BRMS
 CMD ["/opt/jboss/brms/jboss-eap-7.0/bin/standalone.sh","-c","standalone.xml","-b", "0.0.0.0","-bmanagement","0.0.0.0"]

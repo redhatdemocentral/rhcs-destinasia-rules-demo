@@ -84,6 +84,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.1 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation and port forwarding for git repo access configured.
+
 - v1.0 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation.
 
 ![Pods](https://github.com/eschabell/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-brms-pods.png)
