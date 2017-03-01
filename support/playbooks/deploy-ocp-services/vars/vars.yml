@@ -1,0 +1,27 @@
+OC_HOME: /home/virtuser/workspace
+GIT_SOURCE_PROJECT: apac-destinasia-travel
+
+# BRMS
+BRMS_APP_NAME: brms
+BRMS_GIT_REPO: https://github.com/wohshon/rhforum2016brms
+BRMS_GIT_REPO_CONTEXT: /discountRules
+BRMS_GIT_REPO_BRANCH: master
+
+CARS_APP_NAME: cars
+CARS_GIT_REPO: https://github.com/wohshon/rhforum2016
+CARS_GIT_REPO_CONTEXT: /CarWS
+CARS_GIT_REPO_BRANCH: master
+
+HOTELS_APP_NAME: hotels
+HOTELS_GIT_REPO: https://github.com/wohshon/rhforum2016#apacsko
+HOTELS_GIT_REPO_CONTEXT: /HotelWS
+
+FLIGHTS_APP_NAME: flights
+FLIGHTS_GIT_REPO: https://github.com/wohshon/rhforum2016
+FLIGHTS_GIT_REPO_CONTEXT: /FlightWS
+FLIGHTS_GIT_REPO_BRANCH: master
+
+FUSE_APP_NAME: fusetravelagency
+FUSE_GIT_REPO: https://github.com/wohshon/rhforum2016#apacsko
+FUSE_GIT_REPO_CONTEXT: /FuseTravelAgency
+

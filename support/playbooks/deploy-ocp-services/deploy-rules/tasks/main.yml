@@ -1,0 +1,23 @@
+---
+#- name: Test
+#  shell: /bin/echo "hello123"
+
+- name: Login to OCP and Get  Project
+  command: "{{ item }}"
+  with_items:
+    - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
+    - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
+
+- name: get service ip for git repo
+  shell: "{{OC_HOME}}/oc get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | /bin/awk 'NR > 1 {print $2}'"
+  register: git_service_ip
+
+- set_fact:
+   git_svc_ip: "{{ git_service_ip.stdout }}"
+
+- name: Show Service IP
+  debug:
+    msg: "{{ git_svc_ip }}"
+
+- name: Create BRMS App
+  command: "{{OC_HOME}}/oc new-app --template=decisionserver63-basic-s2i  --name={{ BRMS_APP_NAME }} -l app={{ BRMS_APP_NAME }} -p APPLICATION_NAME={{ BRMS_APP_NAME }} -p SOURCE_REPOSITORY_URL=git://{{git_svc_ip}}:9418/destinasia -p CONTEXT_DIR=/discountRules -p SOURCE_REPOSITORY_REF=master -p KIE_CONTAINER_DEPLOYMENT='c2=techoffice:discountRules:1.0'  -p KIE_SERVER_USER=kieserver -p KIE_SERVER_PASSWORD=kieserver1!"
