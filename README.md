@@ -62,15 +62,15 @@ To clone a repository in the running container, the following actions would need
    ```
    # Read-write access to repo on port 8001.
    #
-   $ oc port-forward $(oc get pod -l=deploymentconfig=destinasia-rules-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 8001:8001
+   $ oc port-forward $(oc get pod -l=deploymentconfig=destinasia-rules-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 9418:9418
    ```
 
 2. Clone the repository. In another window, clone the remote repository:
 
    ```
-   # Read-write access to repo on port 8001.
+   # Read access to repo on port 9418.
    #
-   $ git clone git://localhost:8001/destinasia 
+   $ git clone git://localhost:9418/destinasia 
    ```
 
 
