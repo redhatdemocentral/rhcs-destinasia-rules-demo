@@ -49,4 +49,3 @@ response over the gathered car, hotel, flight and discount (rules) pricing:
    # TODO: add REST URL and example payload.
    ```
 
-TODO: fix tools (awk, sed, args) to use env vars and fuse service to work.
