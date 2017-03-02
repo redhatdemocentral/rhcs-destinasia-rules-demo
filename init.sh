@@ -9,6 +9,11 @@ HOST_IP=10.1.2.2
 BRMS=jboss-brms-6.4.0.GA-deployable-eap7.x.zip
 EAP=jboss-eap-7.0.0-installer.jar
 
+# set ansible environment variables.
+export OC_LOC=`which oc`
+export SED_LOC=`which sed`
+export AWK_LOC=`which awk`
+
 # prints the documentation for this script.
 function print_docs() 
 {
