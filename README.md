@@ -34,6 +34,21 @@ Now log in to JBoss BRMS and start developing containerized rules projects (the 
   - OCP example: [http://apac-destinasia-rules-demo.192.168.99.100.xip.io/business-central](http://apac-destinasia-rules-demo.10.1.2.2.xip.io/business-central) ( u:erics / p:jbossbrms1! )
 
 
+Ansible Playbooks for Automated Service Deployment on OpenShift
+---------------------------------------------------------------
+See instructions for [Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
+
+1. Rules from container JBoss BRMS to xPaaS Decision Server
+
+2. .Net service to container
+
+3. Java service to xPaaS EAP Server
+
+4. PHP service to container
+
+5. Fuse service to xPaaS Integration Server
+
+
 Notes
 -----
 This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
