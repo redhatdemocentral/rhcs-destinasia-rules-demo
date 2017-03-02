@@ -1,7 +1,7 @@
 APAC Destinasia Travel Rules Demo
 =================================
-AppDev on Cloud Suite
----------------------------------
+Step 1: AppDev on Cloud Suite
+-----------------------------
 This demo is to install JBoss BRMS with Destinasia Travel discount rules in the Cloud based on leveraging any Red Hat OpenShift container based platform, such as:
 
  - [Red Hat Container Platform (OCP)](https://github.com/redhatdemocentral/ocp-install-demo)
@@ -9,8 +9,8 @@ This demo is to install JBoss BRMS with Destinasia Travel discount rules in the 
 It delivers a fully functioning containerized JBoss BRMS installation.
 
 
-Install JBoss BRMS on OpenShift
--------------------------------
+Step 2: Install JBoss BRMS on OpenShift
+---------------------------------------
 1. First ensure you have an OpenShift container based installation, such as one of the following installed first:
 
   - [OCP Install Demo](https://github.com/redhatdemocentral/ocp-install-demo)
@@ -34,8 +34,8 @@ Now log in to JBoss BRMS and start developing containerized rules projects (the 
   - OCP example: [http://apac-destinasia-rules-demo.192.168.99.100.xip.io/business-central](http://apac-destinasia-rules-demo.10.1.2.2.xip.io/business-central) ( u:erics / p:jbossbrms1! )
 
 
-Ansible Playbooks for Automated Service Deployment on OpenShift
----------------------------------------------------------------
+Step 3: Ansible Playbooks for Automated Service Deployment on OpenShift
+-----------------------------------------------------------------------
 See instructions for [Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
 
 1. Rules from container JBoss BRMS to xPaaS Decision Server
