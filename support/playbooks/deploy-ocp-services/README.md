@@ -1,13 +1,14 @@
 Ansible Playbooks Service Deployment
 ====================================
+It is assumed you have installed ansible-playbook tool for your platform before running the provided playbooks. 
 
-Here you find all the Ansible playbooks for infrastructure automation to deploy the following services:
+Ansible playbooks provided for infrastructure automation to deploy the following services:
 
-  - Car service: .Net deployment to container
-  - Flight service: Java deployment to EAP container
-  - Hotel service: PHP deployment to PHP container
+  - [Car service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/CarWS): .Net deployment to container
+  - [Flight service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/FlightWS): Java deployment to EAP container
+  - [Hotel service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/HotelWS): PHP deployment to PHP container
   - Rule service: rules extracted from BRMS container git repo deployment to xPaaS BRMS Decision Server 
-  - Microservice: Fuse service deploymet to xPaaS Integration, dependent on other services running
+  - [Microservice](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/FuseTravelAgency): Fuse service deploymet to xPaaS Integration, dependent on other services running
 
 Playbook Structure
 ------------------
