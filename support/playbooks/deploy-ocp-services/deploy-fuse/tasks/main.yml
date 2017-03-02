@@ -1,0 +1,17 @@
+---
+- name: Login to OCP and Get  Project
+  command: "{{ item }}"
+  with_items:
+    - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
+    - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
+
+- name: Create Fuse Agency App
+  shell: "{{ OC_HOME }}/oc new-app {{FUSE_GIT_REPO}}  --image-stream=fis-java-openshift  --context-dir={{FUSE_GIT_REPO_CONTEXT}} --name={{FUSE_APP_NAME}} -l app={{FUSE_APP_NAME}}"
+
+- name: patch service
+  shell: "{{ OC_HOME }}/oc get svc {{FUSE_APP_NAME}} -o json | /bin/sed -e 's/\"targetPort\": 8778/\"targetPort\": 8182/g' | {{OC_HOME}}/oc replace svc {{FUSE_APP_NAME}} -f -"
+
+- name: expose service
+  shell: "{{ OC_HOME }}/oc expose svc {{FUSE_APP_NAME}}"
+
+

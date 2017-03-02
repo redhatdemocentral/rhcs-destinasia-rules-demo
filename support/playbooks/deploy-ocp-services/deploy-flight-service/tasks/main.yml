@@ -1,0 +1,11 @@
+---
+- name: Login to OCP and Get  Project
+  command: "{{ item }}"
+  with_items:
+    - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
+    - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
+
+- name: Create FLIGHTS App
+  shell: "{{ OC_HOME }}/oc new-app --template=eap70-basic-s2i --name={{FLIGHTS_APP_NAME}} -l app={{FLIGHTS_APP_NAME}} -p CONTEXT_DIR={{FLIGHTS_GIT_REPO_CONTEXT}} -p APPLICATION_NAME={{FLIGHTS_APP_NAME}} -p SOURCE_REPOSITORY_URL={{FLIGHTS_GIT_REPO}}  -p SOURCE_REPOSITORY_REF={{FLIGHTS_GIT_REPO_BRANCH}}" 
+
+

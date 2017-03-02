@@ -1,0 +1,10 @@
+- hosts: ocp
+  remote_user: virtuser
+  vars_files:
+    - vars/vars.yml
+  roles:
+#    - deploy-rules
+#    - deploy-car-service
+#    - deploy-hotel-service
+#    - deploy-flight-service
+    - deploy-fuse
