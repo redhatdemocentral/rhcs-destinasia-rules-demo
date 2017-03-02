@@ -2,14 +2,14 @@
 #- name: Test
 #  shell: /bin/echo "hello123"
 
-- name: Login to OCP and Get  Project
+- name: Login to OCP and Get Project
   command: "{{ item }}"
   with_items:
     - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
     - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
 
 - name: get service ip for git repo
-  shell: "{{OC_HOME}}/oc get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | /bin/awk 'NR > 1 {print $2}'"
+  shell: "{{OC_HOME}}/oc get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | /usr/bin/awk 'NR > 1 {print $2}'"
   register: git_service_ip
 
 - set_fact:

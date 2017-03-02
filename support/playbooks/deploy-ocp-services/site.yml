@@ -3,8 +3,8 @@
   vars_files:
     - vars/vars.yml
   roles:
-#    - deploy-rules
-#    - deploy-car-service
-#    - deploy-hotel-service
-#    - deploy-flight-service
-    - deploy-fuse
+    - { role: deploy-rules, tags: [ 'ruleservice' ] }
+    - { role: deploy-car-service, tags: [ 'dotnetservice' ] }
+    - { role: deploy-hotel-service, tags: [ 'phpservice' ] }
+    - { role: deploy-flight-service, tags: [ 'javaservice' ] }
+    - { role: deploy-fuse, tags: [ 'fuseservice' ] }

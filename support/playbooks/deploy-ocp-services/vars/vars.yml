@@ -1,9 +1,8 @@
-OC_HOME: /home/virtuser/workspace
+OC_HOME: /Users/erics/bin
 GIT_SOURCE_PROJECT: apac-destinasia-travel
 
 # BRMS
 BRMS_APP_NAME: brms
-BRMS_GIT_REPO: https://github.com/wohshon/rhforum2016brms
 BRMS_GIT_REPO_CONTEXT: /discountRules
 BRMS_GIT_REPO_BRANCH: master
 

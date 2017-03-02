@@ -5,7 +5,6 @@
     - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
     - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
 
-
 - name: Create CARS App
   shell: "{{ OC_HOME }}/oc new-app --code={{ CARS_GIT_REPO }} --image-stream=dotnet:1.0 --context-dir={{CARS_GIT_REPO_CONTEXT }} --name={{CARS_APP_NAME}} -l app={{CARS_APP_NAME}}"
 
