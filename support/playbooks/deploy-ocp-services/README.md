@@ -16,9 +16,7 @@ file is used ensure we are working only on our localhost when looking up contain
 The main file is the site.yml, which contains all of the roles to be exectued, meaning that each service will be run from their
 corresponding playbook file (main.yml) found in their directories.
 
-If you run the playbook site.yml file, it will deploy all the services one after the other.
-
-It is also possible to deploy each service individually by using 'tags' assigned as follows:
+Execute each playbook to watch the service build and deploy in the OpenShift monitoring console:
 
    ```
    # Run Car service (.Net) deployment playbook.
