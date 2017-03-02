@@ -2,15 +2,15 @@
 - name: Login to OCP and Get  Project
   command: "{{ item }}"
   with_items:
-    - "{{ OC_HOME}}/oc login -u openshift-dev -p devel"
-    - "{{OC_HOME}}/oc project {{ GIT_SOURCE_PROJECT }}"
+    - "{{ OC_LOC}} login -u openshift-dev -p devel"
+    - "{{OC_LOC}} project {{ GIT_SOURCE_PROJECT }}"
 
 - name: Create CARS App
-  shell: "{{ OC_HOME }}/oc new-app --code={{ CARS_GIT_REPO }} --image-stream=dotnet:1.0 --context-dir={{CARS_GIT_REPO_CONTEXT }} --name={{CARS_APP_NAME}} -l app={{CARS_APP_NAME}}"
+  shell: "{{ OC_LOC }} new-app --code={{ CARS_GIT_REPO }} --image-stream=dotnet:1.0 --context-dir={{CARS_GIT_REPO_CONTEXT }} --name={{CARS_APP_NAME}} -l app={{CARS_APP_NAME}}"
 
 - name: Patch Service to map to the right port number
-  shell: "{{ OC_HOME }}/oc get svc {{CARS_APP_NAME}} -o json | /bin/sed -e 's/\"targetPort\": 8080/\"targetPort\": 5000/g' | {{OC_HOME}}/oc replace svc {{CARS_APP_NAME}} -f -"
+  shell: "{{ OC_LOC }} get svc {{CARS_APP_NAME}} -o json | {{SED_LOC}} -e 's/\"targetPort\": 8080/\"targetPort\": 5000/g' | {{OC_LOC}} replace svc {{CARS_APP_NAME}} -f -"
 
 - name: expose service
-  shell: "{{ OC_HOME }}/oc expose svc {{CARS_APP_NAME}}"
+  shell: "{{ OC_LOC }} expose svc {{CARS_APP_NAME}}"
 

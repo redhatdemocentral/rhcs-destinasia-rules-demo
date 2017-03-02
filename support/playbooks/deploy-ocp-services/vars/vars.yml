@@ -1,4 +1,6 @@
-OC_HOME: /Users/erics/bin
+OC_LOC: "{{ lookup('env','OC_LOC') }}"
+SED_LOC: "{{ lookup('env','SED_LOC') }}"
+AWK_LOC: "{{ lookup('env','AWK_LOC') }}"
 GIT_SOURCE_PROJECT: apac-destinasia-travel
 
 # BRMS

@@ -1,5 +1,5 @@
 - hosts: ocp
-  remote_user: virtuser
+#  remote_user: virtuser
   vars_files:
     - vars/vars.yml
   roles:
