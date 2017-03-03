@@ -36,14 +36,14 @@ Execute each playbook to watch the service build and deploy in the OpenShift mon
    #
    $ ./ansible-playbook-ruleservice.sh
 
-   # Run Fuse service (xPaaS Integration Service) deployment playbook, deploy after all other services available
-   # as this is connecting to all the other endpoints.
+   # Run Fuse service (xPaaS Integration Service) deployment playbook, deploy after all other 
+   # services available as this is connecting to all the other endpoints.
    #
    $ ./ansible-playbook-fuseservice.sh
 
 
-   # Note: You can deploy all services above with thisdeployment playbook but the Car, Flight, Hotel and Rule services
-   # need to be up before the Fuse service deploys as it expects to use the other services. If the Fuse deployment
+   # Note: You can deploy all services above with thisdeployment playbook but the Car, Flight, 
+   # Hotel and Rule services must be deployed before the Fuse service. If the Fuse deployment 
    # fails, just restart after all services finish deploying.
    #
    $ ./ansible-playbook-services.sh

@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="APAC Destinasia Travel Rules Demo"
-AUTHORS="Andrew Block, Eric D. Schabell"
+AUTHORS="Andrew Block, Eric D. Schabell, Woh Shon Phoon"
 PROJECT="git@github.com:redhatdemocentral/apac-destinasia-rules-demo.git"
 SRC_DIR=./installs
 OPENSHIFT_USER=openshift-dev
