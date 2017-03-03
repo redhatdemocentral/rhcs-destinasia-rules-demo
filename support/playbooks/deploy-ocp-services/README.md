@@ -56,11 +56,15 @@ response over the gathered car, hotel, flight and discount (rules) pricing:
    # To test the services you can push the following payload (request) to the
    # Fuse endpoint.
    #
-   # Enpoint: (TODO - add here example)
+   # Use a RESTClient plugin for Firefox, you can cut-and-paste this request into the client,
+   # see example screenshot below. Change carRentalCo to "Avis" to see response change the 
+   # discount from 15 to 0 due to the business rules in the rule service.
    #
-   # Use a RESTClient plugin for Firefox, you can cut-and-paste this request into the client,see example screenshot below.
-   #
-   {"flightReq":{"flightFrom":"GRU","flightTo":"BOG","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"TA22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"BOG","hotelId":"WBogotá"},"carReq":{"carCity":"BOG","carRentalCo":"Avis","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}
+   # Method: POST
+   # Header: Content-Type application/json
+   # URL: http://fusetravelagency-apac-destinasia-travel.192.168.99.100.xip.io/rest/book
+   # Body:
+   {"flightReq":{"flightFrom":"SIN","flightTo":"PEK","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"SIN22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"PEK","hotelId":"Marriott"},"carReq":{"carCity":"PEK","carRentalCo":"Hertz","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}
    ```
 
- ![Fuse endpoint](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-endpoint.png)
+ ![Fuse post](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-post.png)

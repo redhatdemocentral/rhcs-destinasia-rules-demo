@@ -100,6 +100,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.2 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation and Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse).
+
 - v1.1 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation and port forwarding for git repo access configured.
 
 - v1.0 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation.
@@ -113,5 +115,7 @@ See the tagged releases for the following versions of the product:
 ![Deployments](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
 
 ![Builds](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
+
+![Fuse post](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-post.png)
 
 ![Cloud Suite](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)
