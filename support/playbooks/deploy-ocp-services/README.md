@@ -22,30 +22,38 @@ Execute each playbook to watch the service build and deploy in the OpenShift mon
    ```
    # Run Car service (.Net) deployment playbook.
    #
-   $ ansible-playbook -v -i hosts site.yml --tags "dotnetservice"
+   $ ./ansible-playbook-dotnetservice.sh
 
    # Run Flight service (Java) deployment playbook.
    #
-   $ ansible-playbook -v -i hosts site.yml --tags "javaservice"
+   $ ./ansible-playbook-javaservice.sh
 
    # Run Hotel service (PHP) deployment playbook.
    #
-   $ ansible-playbook -v -i hosts site.yml --tags "phpservice"
+   $ ./ansible-playbook-phpservice.sh
 
    # Run Rule service (xPaaS Decision Service) deployment playbook.
    #
-   $ ansible-playbook -v -i hosts site.yml --tags "ruleservice"
+   $ ./ansible-playbook-ruleservice.sh
 
    # Run Fuse service (xPaaS Integration Service) deployment playbook, deploy after all other services available
    # as this is connecting to all the other endpoints.
    #
-   $ ansible-playbook -v -i hosts site.yml --tags "fuseservice"
+   $ ./ansible-playbook-fuseservice.sh
    ```
 
 Once all the services are deployed, you can send a REST request to the xPaaS Integration Service (Fuse) endpoint to trigger a
 response over the gathered car, hotel, flight and discount (rules) pricing:
 
    ```
-   # TODO: add REST URL and example payload.
+   # To test the services you can push the following payload (request) to the
+   # Fuse endpoint.
+   #
+   # Enpoint: (TODO - add here example)
+   #
+   # Use a RESTClient plugin for Firefox, you can cut-and-paste this request into the client,see example screenshot below.
+   #
+   {"flightReq":{"flightFrom":"GRU","flightTo":"BOG","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"TA22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"BOG","hotelId":"WBogotá"},"carReq":{"carCity":"BOG","carRentalCo":"Avis","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}
    ```
 
+ ![Fuse endpoint](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-endpoint.png)

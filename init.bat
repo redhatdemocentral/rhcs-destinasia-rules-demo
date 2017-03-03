@@ -12,11 +12,6 @@ set HOST_IP=10.1.2.2
 set BRMS=jboss-brms-6.4.0.GA-deployable-eap7.x.zip
 set EAP=jboss-eap-7.0.0-installer.jar
 
-# set ansible environment variables.
-set OC_LOC=(where oc)
-set SED_LOC=(where sed)
-set AWK_LOC=(where gawk)
-
 REM wipe screen.
 cls
 
