@@ -1,7 +1,6 @@
+![Logo](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-logo.png)
 APAC Destinasia Travel Rules Demo
 =================================
-![Logo](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-logo.png)
-
 Step 1: AppDev on Cloud Suite
 -----------------------------
 This demo is to install JBoss BRMS with Destinasia Travel discount rules in the Cloud based on leveraging any Red Hat OpenShift container based platform, such as:
