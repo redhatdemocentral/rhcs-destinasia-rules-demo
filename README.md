@@ -1,4 +1,4 @@
-![Logo](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-logo.png)
+![Logo](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-logo.png)
 
 Destinasia Travel Rules Demo
 ============================
@@ -19,7 +19,7 @@ Step 2: Install JBoss BRMS on OpenShift
 
   - or your own OpenShift installation.
 
-2. [Download and unzip this demo.](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/archive/master.zip)
+2. [Download and unzip this demo.](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/archive/master.zip)
 
 3. Download JBoss EAP & JBoss BRMS, add to installs directory (see installs/README).
 
@@ -38,7 +38,7 @@ Now log in to JBoss BRMS and start developing containerized rules projects (the 
 
 Step 3: Ansible Playbooks for Automated Service Deployment on OpenShift
 -----------------------------------------------------------------------
-See instructions for [Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
+See instructions for [Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
 
 1. Rules from container JBoss BRMS to xPaaS Decision Server
 
@@ -58,7 +58,7 @@ This project can be installed on any OpenShift platform, such as the OpenShift C
   $ ./init.sh IP
 ```
 
-If for any reason the installation breaks or you want a new JBoss BRMS installation, just remove the project apac-destinasia-rules-demo entry in the OpenShift console and re-run the installation.
+If for any reason the installation breaks or you want a new JBoss BRMS installation, just remove the project rhcs-destinasia-rules-demo entry in the OpenShift console and re-run the installation.
 
 Should your local network DNS not handle the resolution of the above address, giving you page not found errors, you can apply the following to your local hosts file:
 
@@ -93,6 +93,8 @@ To clone a repository in the running container, the following actions would need
 
 Supporting Articles
 -------------------
+- [App Dev in the Cloud, a Red Hat Cloud Suite workshop](https://appdevcloudworkshop.github.io/#/)
+
 - [App Dev in the Cloud: How To Run JBoss BRMS in a Container](http://www.schabell.org/2016/12/appdev-cloud-howto-run-jboss-brms-in-container.html)
 
 - [Real App Dev in the Cloud with JBoss BRMS Install Demo](http://www.schabell.org/2016/03/real-appdev-in-cloud-jboss-brms-install-demo.html)
@@ -109,14 +111,14 @@ See the tagged releases for the following versions of the product:
 - v1.0 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation.
 
 
-![Pods](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-brms-pods.png)
+![Pods](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-brms-pods.png)
 
-![Rules](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-travel-discount-rules.png)
+![Rules](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-travel-discount-rules.png)
 
-![Deployments](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-deployments.png)
+![Deployments](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-deployments.png)
 
-![Builds](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
+![Builds](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
 
-![Fuse post](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-post.png)
+![Fuse post](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-post.png)
 
-![Cloud Suite](https://github.com/redhatdemocentral/apac-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)
+![Cloud Suite](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)

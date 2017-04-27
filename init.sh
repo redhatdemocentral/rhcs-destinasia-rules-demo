@@ -1,13 +1,17 @@
 #!/bin/sh 
 DEMO="APAC Destinasia Travel Rules Demo"
 AUTHORS="Andrew Block, Eric D. Schabell, Woh Shon Phoon"
-PROJECT="git@github.com:redhatdemocentral/apac-destinasia-rules-demo.git"
+PROJECT="git@github.com:redhatdemocentral/rhcs-destinasia-rules-demo.git"
 SRC_DIR=./installs
-OPENSHIFT_USER=openshift-dev
-OPENSHIFT_PWD=devel
-HOST_IP=10.1.2.2
 BRMS=jboss-brms-6.4.0.GA-deployable-eap7.x.zip
 EAP=jboss-eap-7.0.0-installer.jar
+
+# Adjust these variables to point to an OCP instance.
+OPENSHIFT_USER=openshift-dev
+OPENSHIFT_PWD=devel
+HOST_IP=192.168.99.100
+OCP_PRJ=appdev-in-cloud
+OCP_APP=destinasia-rules-demo
 
 # prints the documentation for this script.
 function print_docs() 
@@ -66,7 +70,7 @@ echo
 
 # validate OpenShift host IP.
 if [ $# -eq 1 ]; then
-	if valid_ip $1; then
+	if [ $(valid_ip $1) ] || [ $1 == $HOST_IP ]; then
 		echo "OpenShift host given is a valid IP..."
 		HOST_IP=$1
 		echo
@@ -121,8 +125,7 @@ echo "Logging in to OpenShift as $OPENSHIFT_USER..."
 echo
 oc login $HOST_IP:8443 --password=$OPENSHIFT_PWD --username=$OPENSHIFT_USER
 
-
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc login' command!
 	exit
@@ -131,14 +134,14 @@ fi
 echo
 echo "Creating a new project..."
 echo
-oc new-project apac-destinasia-travel
+oc new-project $OCP_PRJ
 
 echo
 echo "Setting up a new build..."
 echo
-oc new-build "jbossdemocentral/developer" --name=destinasia-rules-demo --binary=true
+oc new-build "jbossdemocentral/developer" --name=$OCP_APP --binary=true
 
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc new-build' command!
 	exit
@@ -152,7 +155,7 @@ echo "Importing developer image..."
 echo
 oc import-image developer
 
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc import-image' command!
 	exit
@@ -161,9 +164,9 @@ fi
 echo
 echo "Starting a build, this takes some time to upload all of the product sources for build..."
 echo
-oc start-build destinasia-rules-demo --from-dir=. --follow=true --wait=true
+oc start-build $OCP_APP --from-dir=. --follow=true --wait=true
 
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc start-build' command!
 	exit
@@ -175,9 +178,9 @@ sleep 3
 echo
 echo "Creating a new application..."
 echo
-oc new-app destinasia-rules-demo
+oc new-app $OCP_APP
 
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc new-app' command!
 	exit
@@ -186,9 +189,9 @@ fi
 echo
 echo "Creating an externally facing route by exposing a service..."
 echo
-oc expose service destinasia-rules-demo --port=8080 --hostname="destinasia-rules-demo.$HOST_IP.xip.io"
+oc expose service $OCP_APP --port=8080 --hostname="$OCP_APP.$HOST_IP.xip.io"
 
-if [ $? -ne 0 ]; then
+if [ "$?" -ne "0" ]; then
 	echo
 	echo Error occurred during 'oc expose service' command!
 	exit
@@ -199,7 +202,7 @@ echo "==========================================================================
 echo "=                                                                         ="
 echo "=  Login to JBoss BRMS to start developing rules projects:                ="
 echo "=                                                                         ="
-echo "=  http://destinasia-rules-demo.$HOST_IP.xip.io/business-central    ="
+echo "=  http://$OCP_APP.$HOST_IP.xip.io/business-central    ="
 echo "=                                                                         ="
 echo "=  [ u:erics / p:jbossbrms1! ]                                            ="
 echo "=                                                                         ="

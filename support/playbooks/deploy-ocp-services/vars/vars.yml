@@ -1,7 +1,9 @@
 OC_LOC: "{{ lookup('env','OC_LOC') }}"
 SED_LOC: "{{ lookup('env','SED_LOC') }}"
 AWK_LOC: "{{ lookup('env','AWK_LOC') }}"
-GIT_SOURCE_PROJECT: apac-destinasia-travel
+GIT_SOURCE_PROJECT: appdev-in-cloud
+OCP_USER: openshift-dev
+OCP_PASS: devel
 
 # BRMS
 BRMS_APP_NAME: brms

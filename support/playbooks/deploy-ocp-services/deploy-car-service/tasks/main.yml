@@ -2,7 +2,7 @@
 - name: Login to OCP and Get  Project
   command: "{{ item }}"
   with_items:
-    - "{{ OC_LOC}} login -u openshift-dev -p devel"
+    - "{{ OC_LOC}} login -u {{ OCP_USER }} -p {{ OCP_PASS }}"
     - "{{OC_LOC}} project {{ GIT_SOURCE_PROJECT }}"
 
 - name: Create CARS App
