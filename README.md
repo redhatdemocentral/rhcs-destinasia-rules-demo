@@ -70,7 +70,7 @@ $ sudo vi /etc/hosts
 ```
 
 The rule test you find in the project is BROKEN... guess what, you need to fix that! Hint for the fix is that the flights are all
-APAC destinations, but the test uses an unknown destination for the rules. Can you fix it?
+Asian destinations, but the test uses an unknown destination for the rules. Can you fix it?
 
 To clone a repository in the running container, the following actions would need to occur from a developer's machine.
 

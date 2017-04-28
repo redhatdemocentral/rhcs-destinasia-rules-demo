@@ -1,5 +1,5 @@
 #!/bin/sh 
-DEMO="APAC Destinasia Travel Rules Demo"
+DEMO="Destinasia Travel Rules Demo"
 AUTHORS="Andrew Block, Eric D. Schabell, Woh Shon Phoon"
 PROJECT="git@github.com:redhatdemocentral/rhcs-destinasia-rules-demo.git"
 SRC_DIR=./installs

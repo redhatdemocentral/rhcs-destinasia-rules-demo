@@ -2,7 +2,7 @@
 setlocal enableextensions enabledelayedexpansion
 
 set PROJECT_HOME=%~dp0
-set DEMO=APAC Destinasia Travel Rules Demo
+set DEMO=Destinasia Travel Rules Demo
 set AUTHORS=Andrew Block, Eric D. Schabell, Woh Shon Phoon
 set PROJECT=git@github.com:redhatdemocentral/rhcs-destinasia-rules-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
