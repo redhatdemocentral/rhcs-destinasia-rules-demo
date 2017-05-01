@@ -62,7 +62,7 @@ response over the gathered car, hotel, flight and discount (rules) pricing:
    #
    # Method: POST
    # Header: Content-Type application/json
-   # URL: http://fusetravelagency-apac-destinasia-travel.192.168.99.100.xip.io/rest/book
+   # URL: http://fusetravelagency-appdev-in-cloud.192.168.99.100.xip.io/rest/book
    # Body:
    {"flightReq":{"flightFrom":"SIN","flightTo":"PEK","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"SIN22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"PEK","hotelId":"Marriott"},"carReq":{"carCity":"PEK","carRentalCo":"Hertz","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}
    ```
