@@ -6,7 +6,7 @@
     - "{{OC_LOC}} project {{ GIT_SOURCE_PROJECT }}"
 
 - name: Create CARS App
-  shell: "{{ OC_LOC }} new-app --code={{ CARS_GIT_REPO }} --image-stream=dotnet:1.0 --context-dir={{CARS_GIT_REPO_CONTEXT }} --name={{CARS_APP_NAME}} -l app={{CARS_APP_NAME}}"
+  shell: "{{ OC_LOC }} new-app --code={{ CARS_GIT_REPO }} --image-stream=dotnet:1.1 --context-dir={{CARS_GIT_REPO_CONTEXT }} --name={{CARS_APP_NAME}} -l app={{CARS_APP_NAME}}"
 
 - name: Patch Service to map to the right port number
   shell: "{{ OC_LOC }} get svc {{CARS_APP_NAME}} -o json | {{SED_LOC}} -e 's/\"targetPort\": 8080/\"targetPort\": 5000/g' | {{OC_LOC}} replace svc {{CARS_APP_NAME}} -f -"
