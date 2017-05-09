@@ -13,9 +13,6 @@ command -v ansible-playbook --version  >/dev/null 2>&1 || { echo; echo "Missing 
 
 echo 
 echo "If you followed the first steps to setup the Destinasia Travel Rules on OpenShift Container Platform,"
-echo "the following will install the $SERIVCE now..."
+echo "the following will install the Car $SERVICE now..."
 echo
-
-# Run Car service (.Net) deployment playbook.
-#
 ansible-playbook -v -i hosts site.yml --tags "$SERVICE"

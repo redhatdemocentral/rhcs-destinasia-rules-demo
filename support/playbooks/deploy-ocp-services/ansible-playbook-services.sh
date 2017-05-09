@@ -14,7 +14,4 @@ echo
 echo "If you followed the first steps to setup the Destinasia Travel Rules on OpenShift Container Platform,"
 echo "the following will install the all the services now..."
 echo
-
-# Run Car service (.Net) deployment playbook.
-#
 ansible-playbook -v -i hosts site.yml

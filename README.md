@@ -65,7 +65,7 @@ Should your local network DNS not handle the resolution of the above address, gi
 ```
 $ sudo vi /etc/hosts
 
-# add host for OCP demo resulution
+# add host for OCP demo resolution.
 192.168.99.100   destinasia-rules-demo.192.168.99.100.xip.io 
 ```
 
