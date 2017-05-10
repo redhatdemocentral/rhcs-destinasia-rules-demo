@@ -53,6 +53,8 @@ See instructions for [Ansible Playbooks Service Deployment](https://github.com/r
 
 Notes
 -----
+Experience this project in a [free online workshop](http://appdevcloudworkshop.github.io).
+
 This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
   $ ./init.sh IP
@@ -93,6 +95,8 @@ To clone a repository in the running container, the following actions would need
 
 Supporting Articles
 -------------------
+- [Get hands-on with AppDev Cloud free online workshop.](http://appdevcloudworkshop.github.io)
+
 - [App Dev in the Cloud, a Red Hat Cloud Suite workshop](https://appdevcloudworkshop.github.io/#/)
 
 - [App Dev in the Cloud: How To Run JBoss BRMS in a Container](http://www.schabell.org/2016/12/appdev-cloud-howto-run-jboss-brms-in-container.html)
