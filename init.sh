@@ -74,7 +74,7 @@ if [ $# -eq 1 ]; then
 		echo "OpenShift host given is a valid IP..."
 		HOST_IP=$1
 		echo
-		echo "Proceeding wiht OpenShift host: $HOST_IP..."
+		echo "Proceeding with OpenShift host: $HOST_IP..."
 		echo
 	else
 		# bad argument passed.
