@@ -9,7 +9,7 @@ EAP=jboss-eap-7.0.0-installer.jar
 # Adjust these variables to point to an OCP instance.
 OPENSHIFT_USER=openshift-dev
 OPENSHIFT_PWD=devel
-HOST_IP=192.168.99.100
+HOST_IP=yourhost.com
 OCP_PRJ=appdev-in-cloud
 OCP_APP=destinasia-rules-demo
 
@@ -70,8 +70,8 @@ echo
 
 # validate OpenShift host IP.
 if [ $# -eq 1 ]; then
-	if [ $(valid_ip $1) ] || [ $1 == $HOST_IP ]; then
-		echo "OpenShift host given is a valid IP..."
+	if valid_ip "$1" || [ "$1" == "$HOST_IP" ]; then
+		echo "OpenShift host given is a valid IP or matches HOST_IP variable..."
 		HOST_IP=$1
 		echo
 		echo "Proceeding with OpenShift host: $HOST_IP..."
