@@ -4,10 +4,10 @@ It is assumed you have installed ansible-playbook tool for your platform before 
 
 Ansible playbooks provided for infrastructure automation to deploy the following services:
 
+  - Rule service: rules extracted from BRMS container git repo deployment to xPaaS BRMS Decision Server 
   - [Car service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/CarWS): .Net deployment to container
   - [Flight service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/FlightWS): Java deployment to EAP container
   - [Hotel service](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/HotelWS): PHP deployment to PHP container
-  - Rule service: rules extracted from BRMS container git repo deployment to xPaaS BRMS Decision Server 
   - [Microservice](https://github.com/redhatdemocentral/destinasia-services-repo/tree/master/FuseTravelAgency): Fuse service deploymet to xPaaS Integration, dependent on other services running
 
 Playbook Structure
@@ -19,7 +19,11 @@ corresponding playbook file (main.yml) found in their directories.
 
 Execute each playbook to watch the service build and deploy in the OpenShift monitoring console:
 
-   ```
+  ```
+   # Run Rule service (xPaaS Decision Service) deployment playbook.
+   #
+   $ ./ansible-playbook-ruleservice.sh
+
    # Run Car service (.Net) deployment playbook.
    #
    $ ./ansible-playbook-dotnetservice.sh
@@ -31,10 +35,6 @@ Execute each playbook to watch the service build and deploy in the OpenShift mon
    # Run Hotel service (PHP) deployment playbook.
    #
    $ ./ansible-playbook-phpservice.sh
-
-   # Run Rule service (xPaaS Decision Service) deployment playbook.
-   #
-   $ ./ansible-playbook-ruleservice.sh
 
    # Run Fuse service (xPaaS Integration Service) deployment playbook, deploy after all other 
    # services available as this is connecting to all the other endpoints.
