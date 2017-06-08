@@ -113,7 +113,7 @@ if [ -r $SRC_DIR/$BRMS ] || [ -L $SRC_DIR/$BRMS ]; then
 	echo Product BRMS sources are present...
 	echo
 else
-	echo Need to download $BRMS from https://developers.redhat.com/products/bpmsuite/download
+	echo Need to download $BRMS from https://developers.redhat.com/products/brms/download
 	echo and place it in the $SRC_DIR directory to proceed...
 	echo
 	exit

@@ -84,7 +84,7 @@ if exist "%SRC_DIR%\%BRMS%" (
         echo Product BPM Suite sources are present...
         echo.
 ) else (
-        echo Need to download %BRMS% package from https://developers.redhat.com/products/bpmsuite/download
+        echo Need to download %BRMS% package from https://developers.redhat.com/products/brms/download
         echo and place it in the %SRC_DIR% directory to proceed...
         echo.
         GOTO :EOF
