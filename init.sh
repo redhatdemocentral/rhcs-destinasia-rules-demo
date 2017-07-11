@@ -139,6 +139,9 @@ oc new-project $OCP_PRJ
 echo
 echo "Setting up a new build..."
 echo
+oc delete bc "$OCP_APP" -n "$OCP_PRJ" >/dev/null 2>&1
+oc delete imagestreams "developer" >/dev/null 2>&1
+oc delete imagestreams "$OCP_APP" >/dev/null 2>&1
 oc new-build "jbossdemocentral/developer" --name=$OCP_APP --binary=true
 
 if [ "$?" -ne "0" ]; then

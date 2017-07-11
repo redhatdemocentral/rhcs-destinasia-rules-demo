@@ -53,7 +53,7 @@ See instructions for [Ansible Playbooks Service Deployment](https://github.com/r
 
 Notes
 -----
-Experience this project in a [free online workshop](http://appdevcloudworkshop.github.io).
+Need hands-on, step-by-step instructions? Experience the [free online workshop](http://appdevcloudworkshop.github.io).
 
 This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
