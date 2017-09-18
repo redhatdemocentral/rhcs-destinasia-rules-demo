@@ -38,7 +38,7 @@ Now log in to JBoss BRMS and start developing containerized rules projects (the 
 
 Step 3: Ansible Playbooks for Automated Service Deployment on OpenShift
 -----------------------------------------------------------------------
-See instructions for [Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
+Click on [link to instructions for Ansible Playbooks Service Deployment](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/support/playbooks/deploy-ocp-services/README.md) to deploy:
 
 1. Rules from container JBoss BRMS to xPaaS Decision Server
 
@@ -138,7 +138,5 @@ See the tagged releases for the following versions of the product:
 ![Deployments](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-deployments.png)
 
 ![Builds](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
-
-![Fuse post](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-fuse-post.png)
 
 ![Cloud Suite](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)
