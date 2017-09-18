@@ -17,4 +17,4 @@
     msg: "{{ git_svc_ip }}"
 
 - name: Create BRMS App
-  command: "{{ OC_LOC }} new-app --template=decisionserver63-basic-s2i  --name={{ BRMS_APP_NAME }} -l app={{ BRMS_APP_NAME }} -p APPLICATION_NAME={{ BRMS_APP_NAME }} -p SOURCE_REPOSITORY_URL=git://{{git_svc_ip}}:9418/destinasia -p CONTEXT_DIR=/discountRules -p SOURCE_REPOSITORY_REF=master -p KIE_CONTAINER_DEPLOYMENT='c2=techoffice:discountRules:1.0'  -p KIE_SERVER_USER=kieserver -p KIE_SERVER_PASSWORD=kieserver1!"
+  command: "{{ OC_LOC }} new-app --template=decisionserver64-basic-s2i  --name={{ BRMS_APP_NAME }} -l app={{ BRMS_APP_NAME }} -p APPLICATION_NAME={{ BRMS_APP_NAME }} -p SOURCE_REPOSITORY_URL=git://{{git_svc_ip}}:9418/destinasia -p CONTEXT_DIR=/discountRules -p SOURCE_REPOSITORY_REF=master -p KIE_CONTAINER_DEPLOYMENT='c2=techoffice:discountRules:1.0'  -p KIE_SERVER_USER=kieserver -p KIE_SERVER_PASSWORD=kieserver1!"
