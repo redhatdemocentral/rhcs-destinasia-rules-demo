@@ -137,6 +137,4 @@ See the tagged releases for the following versions of the product:
 
 ![Deployments](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-deployments.png)
 
-![Builds](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-builds.png)
-
 ![Cloud Suite](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)
