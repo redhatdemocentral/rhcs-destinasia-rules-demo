@@ -201,15 +201,15 @@ if [ "$?" -ne "0" ]; then
 fi
 
 echo
-echo "==========================================================================="
-echo "=                                                                         ="
-echo "=  Login to JBoss BRMS to start developing rules projects:                ="
-echo "=                                                                         ="
-echo "=  http://$OCP_APP-$OCP_PRJ.$HOST_IP.nip.io/business-central    ="
-echo "=                                                                         ="
-echo "=  [ u:erics / p:jbossbrms1! ]                                            ="
-echo "=                                                                         ="
-echo "=  Note: it takes a few minutes to expose the service...                  ="
-echo "=                                                                         ="
-echo "==========================================================================="
+echo "========================================================================================="
+echo "=                                                                                       ="
+echo "=  Login to JBoss BRMS to start developing rules projects:                              ="
+echo "=                                                                                       ="
+echo "=  http://$OCP_APP-$OCP_PRJ.$HOST_IP.nip.io/business-central  ="
+echo "=                                                                                       ="
+echo "=  [ u:erics / p:jbossbrms1! ]                                                          ="
+echo "=                                                                                       ="
+echo "=  Note: it takes a few minutes to expose the service...                                ="
+echo "=                                                                                       ="
+echo "========================================================================================="
 
