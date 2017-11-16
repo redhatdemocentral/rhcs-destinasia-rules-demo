@@ -2,8 +2,18 @@
 
 Destinasia Travel Rules Demo
 ============================
-Step 1: AppDev on Cloud Suite
------------------------------
+Ready to get hands-on with AppDev in the Cloud with container based services? 
+
+Experience the wonders of Red Hat's open technologies for cloud-based container application development by integrating multiple services in to a polyglot cloud solution. In this project you're a developer working for Destinaisa, a travel agency that needs to setup its online bookings applications backend services. Using the OpenShift Container Platform for deploying this solution, start by installing JBoss BRMS to work on the Destinasia travel discount rules. Once deployed, you leverage Ansible playbooks to see infrastructure automation in action. Each playbook deploys a new container-based service to support flight, hotel, car and discount rule queries from your application. In total this integration projects running 6 container-based applications or services and final testing is done with a REST client. Validation is sending a booking message to the integration end-point and verifying the discounts provided by the integrated services.
+
+Need hands-on, step-by-step instructions? Experience the [free online workshop](http://appdevcloudworkshop.github.io).
+
+This demo is also available on the [Red Hat Product Demo System](https://rhpds.redhat.com) for partners with access and found in
+'Catalog' -> 'AppDev in the Cloud' -> 'Agile Cloud Integration with Destinasia'.
+
+
+Step 1: Install OpenShift Container Platform
+--------------------------------------------
 This demo is to install JBoss BRMS with Destinasia Travel discount rules in the Cloud based on leveraging any Red Hat OpenShift container based platform, such as:
 
  - [Red Hat Container Platform (OCP)](https://github.com/redhatdemocentral/ocp-install-demo)
@@ -53,28 +63,9 @@ Click on [link to instructions for Ansible Playbooks Service Deployment](https:/
 
 Notes
 -----
-Need hands-on, step-by-step instructions? Experience the [free online workshop](http://appdevcloudworkshop.github.io).
-
------
-
 This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
   $ ./init.sh IP
-```
-
------
-
-If for any reason the installation breaks or you want a new JBoss BRMS installation, just remove the project rhcs-destinasia-rules-demo entry in the OpenShift console and re-run the installation.
-
------
-
-Should your local network DNS not handle the resolution of the above address, giving you page not found errors, you can apply the following to your local hosts file:
-
-```
-$ sudo vi /etc/hosts
-
-# add host for OCP demo resolution.
-192.168.99.100   destinasia-rules-demo.192.168.99.100.xip.io 
 ```
 
 -----
@@ -124,6 +115,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.3 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation, Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse) and available on RHPDS.
+
 - v1.2 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation and Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse).
 
 - v1.1 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation and port forwarding for git repo access configured.
@@ -136,5 +129,7 @@ See the tagged releases for the following versions of the product:
 ![Rules](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-travel-discount-rules.png)
 
 ![Deployments](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-services-deployments.png)
+
+![RHPDS](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/rhpds-destinasia.png)
 
 ![Cloud Suite](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/rhcs-arch.png)
