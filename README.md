@@ -17,8 +17,14 @@ Step 1: Install OpenShift Container Platform
 This demo is to install JBoss BRMS with Destinasia Travel discount rules in the Cloud based on leveraging any Red Hat OpenShift container based platform, such as:
 
  - [Red Hat Container Platform (OCP)](https://github.com/redhatdemocentral/ocp-install-demo)
+
+This delivers a fully configured container platform with all the available product streams and templates.
+
+Another option is:
+
+ - [Red Hat Container Development Kit (CDK) using Minishift](https://developers.redhat.com/products/cdk/overview)
   
-It delivers a fully functioning containerized JBoss BRMS installation.
+This requires adding ASP.NET core stream manually, a task outside the scope of this project.
 
 
 Step 2: Install JBoss BRMS on OpenShift
@@ -114,6 +120,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.4 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation, Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse) and available on CDK with Minishift.
 
 - v1.3 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation, Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse) and available on RHPDS.
 
