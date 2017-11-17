@@ -24,7 +24,7 @@ Another option is:
 
  - [Red Hat Container Development Kit (CDK) using Minishift](https://developers.redhat.com/products/cdk/overview)
   
-This requires adding ASP.NET core stream manually, a task outside the scope of this project.
+This requires adding .NET core stream manually, a task outside the scope of this project.
 
 
 Step 2: Install JBoss BRMS on OpenShift
