@@ -69,6 +69,19 @@ Click on [link to instructions for Ansible Playbooks Service Deployment](https:/
 
 Notes
 -----
+
+Should your local network DNS not handle the resolution of the above address, giving you page not found errors, you can apply the
+following to your local hosts file:
+
+```
+$ sudo vi /etc/hosts
+
+# add host for OCP demo resulution
+192.168.99.100   destinasia-rules-demo-appdev-in-cloud.192.168.99.100.nip.io 
+```
+
+-----
+
 This project can be installed on any OpenShift platform, such as the OpenShift Container Platform. It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
   $ ./init.sh IP
