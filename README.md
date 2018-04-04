@@ -134,6 +134,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.5 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel solution updated for on any given OpenShift Container Platform 3.9 and available on CDK with Minishift.
+
 - v1.4 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation, Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse) and available on CDK with Minishift.
 
 - v1.3 - JBoss BRMS 6.4.0, JBoss EAP 7.0.0 with Destinasia Travel discount rules running on any given OpenShift installation, Ansible playbooks for automation of service deployments (PHP, Java, Rules, .Net, Fuse) and available on RHPDS.
