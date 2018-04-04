@@ -15,6 +15,7 @@ set OPENSHIFT_PWD=devel
 set HOST_IP=192.168.99.100
 set OCP_APP=destinasia-rules-demo
 set OCP_PRJ=appdev-in-cloud
+set OCP_DESCRIPTION=Agile Cloud Integration
 
 REM wipe screen.
 cls
@@ -110,7 +111,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating a new project...
 echo.
-call oc new-project %OCP_PRJ%
+call oc new-project %OCP_PRJ% --display-name="%OCP_DESCRIPTION%" --description="Agile cloud integraiton with Destinasia travel agency booking solution."
 
 echo.
 echo Setting up a new build...

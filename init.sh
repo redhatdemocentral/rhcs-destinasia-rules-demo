@@ -12,6 +12,7 @@ OPENSHIFT_PWD=devel
 HOST_IP=yourhost.com
 OCP_PRJ=appdev-in-cloud
 OCP_APP=destinasia-rules-demo
+OCP_DESCRIPTION="Agile Cloud Integration"
 
 # prints the documentation for this script.
 function print_docs() 
@@ -134,7 +135,7 @@ fi
 echo
 echo "Creating a new project..."
 echo
-oc new-project $OCP_PRJ
+oc new-project "$OCP_PRJ" --display-name="$OCP_DESCRIPTION" --description="Agile cloud integraiton with Destinasia travel agency booking solution."
 
 echo
 echo "Setting up a new build..."
