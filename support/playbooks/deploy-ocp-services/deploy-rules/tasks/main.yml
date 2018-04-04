@@ -6,7 +6,8 @@
     - "{{OC_LOC}} project {{ GIT_SOURCE_PROJECT }}"
 
 - name: get service ip for git repo
-  shell: "{{OC_LOC}} get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | {{ AWK_LOC }} 'NR > 1 {print $2}'"
+  #shell: "{{OC_LOC}} get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | {{ AWK_LOC }} 'NR > 1 {print $2}'"  # OCP 3.7
+  shell: "{{OC_LOC}} get svc destinasia-rules-demo -n{{ GIT_SOURCE_PROJECT }} | grep destinasia | {{ AWK_LOC }} '{print $3}'"  # OCP 3.9
   register: git_service_ip
 
 - set_fact:
