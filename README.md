@@ -1,3 +1,5 @@
+Update: June 2018 moved to [Gitlab](https://gitlab.com/redhatdemocentral/rhcs-destinasia-rules-demo).
+
 ![Logo](https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/blob/master/docs/demo-images/destinasia-logo.png)
 
 Destinasia Travel Rules Demo
